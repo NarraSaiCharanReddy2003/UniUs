@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UniUs — Your AI assistant for US university information. Ask about admissions, rankings, locations, and more.">
+    <title>UniUs — US University Chatbot</title>
+    <link rel="icon" href="/static/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div class="splash-screen" id="splash-screen">
+        <img src="/static/logo.png" alt="UniUs Logo" class="splash-logo">
+        <div class="splash-title">UniUs</div>
+        <div class="splash-tagline">US University Assistant</div>
+        <div class="splash-bar">
+            <div class="splash-bar-fill"></div>
+        </div>
+    </div>
+
+    <!-- Main App -->
+    <div class="app-container" id="app-container">
+        <!-- Header -->
+        <header class="chat-header" id="chat-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <img src="/static/logo.png" alt="UniUs">
+                    </div>
+                    <div class="logo-text">
+                        <h1>Uni<span>Us</span></h1>
+                        <span class="tagline">US University Assistant</span>
+                    </div>
+                </div>
+                <div class="header-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Online</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Chat Messages -->
+        <main class="chat-messages" id="chat-messages">
+            <!-- Welcome message -->
+            <div class="message bot-message welcome-message" id="welcome-message">
+                <div class="message-avatar">
+                    <img src="/static/logo.png" alt="UniUs">
+                </div>
+                <div class="message-content">
+                    <div class="message-bubble">
+                        <p>Hey there! 👋 Welcome to <strong>UniUs</strong></p>
+                        <p>I'm your dedicated US university assistant! Ask me about any US college or university — locations, types, leadership, websites, and more.</p>
+                        <div class="suggested-questions">
+                            <p class="suggest-label">Try asking:</p>
+                            <button class="suggest-btn" onclick="sendSuggested(this)">Tell me about MIT</button>
+                            <button class="suggest-btn" onclick="sendSuggested(this)">Universities in California</button>
+                            <button class="suggest-btn" onclick="sendSuggested(this)">Compare Harvard and Stanford</button>
+                            <button class="suggest-btn" onclick="sendSuggested(this)">How many public universities exist?</button>
+                        </div>
+                    </div>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Input Area -->
+        <footer class="chat-input-area" id="chat-input-area">
+            <div class="input-container">
+                <textarea 
+                    id="message-input" 
+                    class="message-input" 
+                    placeholder="Ask about any US university..." 
+                    rows="1"
+                    maxlength="500"
+                ></textarea>
+                <button class="send-btn" id="send-btn" onclick="sendMessage()" aria-label="Send message">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+            <div class="input-footer">
+                <span class="powered-by">Powered by Groq AI • Data from US Dept. of Education</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
