@@ -14,6 +14,20 @@
 *   **Data Processing:** Pandas, RapidFuzz
 *   **AI/LLM:** Groq API
 
+## Key Learnings
+
+1. **RAG Pipeline Design**: Built a retrieval-augmented system combining local fuzzy-search 
+   with LLM generation for accurate, contextual responses.
+   
+2. **API Integration**: Hands-on experience integrating Groq API, handling rate limits, 
+   and optimizing inference speed.
+   
+3. **Full-Stack Development**: End-to-end project from data processing (Pandas) → backend 
+   (Flask) → responsive frontend (HTML/CSS/JS).
+   
+4. **Production Deployment**: Deployed live application on Render with environment 
+   variable management.
+
 ## 📸 Project Preview
 
 ### File Structure
