@@ -71,3 +71,12 @@ This app is ready to be deployed on platforms like **Render**, **Railway**, or *
 A `Procfile` is included for automatic deployment configurations.
 
 Remember to set the `GROQ_API_KEY` in the environment variables of your hosting provider!
+
+## Next Steps
+- Implement vector database (Pinecone/Chroma) instead of fuzzy-search
+- Add university ranking data integration
+- Improve conversation context handling
+- Add user feedback mechanism
+
+## Author
+Narra Sai charan Reddy
